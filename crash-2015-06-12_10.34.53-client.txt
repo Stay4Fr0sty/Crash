@@ -1,0 +1,162 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 6/12/15 10:34 AM
+Description: Ticking screen
+
+java.lang.ClassCastException: rimevel.SimplySit.entities.EntitySitPoint cannot be cast to net.minecraft.entity.EntityLivingBase
+	at net.minecraft.client.network.NetHandlerPlayClient.func_147281_a(NetHandlerPlayClient.java:744)
+	at net.minecraft.network.play.server.S0FPacketSpawnMob.func_148833_a(SourceFile:97)
+	at net.minecraft.network.play.server.S0FPacketSpawnMob.func_148833_a(SourceFile:15)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:212)
+	at net.minecraft.client.multiplayer.GuiConnecting.func_73876_c(SourceFile:78)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1661)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:973)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.network.NetHandlerPlayClient.func_147281_a(NetHandlerPlayClient.java:744)
+	at net.minecraft.network.play.server.S0FPacketSpawnMob.func_148833_a(SourceFile:97)
+	at net.minecraft.network.play.server.S0FPacketSpawnMob.func_148833_a(SourceFile:15)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:212)
+	at net.minecraft.client.multiplayer.GuiConnecting.func_73876_c(SourceFile:78)
+
+-- Affected screen --
+Details:
+	Screen name: ~~ERROR~~ NullPointerException: null
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Stay4Fr0sty'/82166, l='MpServer', x=319.45, y=71.02, z=539.61]]
+	Chunk stats: MultiplayerChunkCache: 0, 0
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-34,78,250), Chunk: (at 14,4,10 in -3,15; contains blocks -48,0,240 to -33,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 5966784 game time, 2760397 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 12 total; [MoCEntityBunny['Bunny'/82277, l='MpServer', x=318.94, y=75.00, z=515.72], EntityItem['item.item.feather'/82279, l='MpServer', x=314.72, y=74.13, z=552.50], MoCEntityBunny['Bunny'/82278, l='MpServer', x=322.28, y=65.00, z=543.78], MoCEntityDuck['Duck'/82281, l='MpServer', x=334.31, y=71.00, z=552.94], MoCEntityBunny['Bunny'/82280, l='MpServer', x=290.69, y=56.00, z=515.63], MoCEntityBunny['Bunny'/82283, l='MpServer', x=334.50, y=71.22, z=552.31], EntityClientPlayerMP['Stay4Fr0sty'/82166, l='MpServer', x=319.45, y=71.02, z=539.61], MoCEntityDuck['Duck'/82282, l='MpServer', x=325.53, y=71.19, z=548.91], MoCEntityMole['Mole'/82285, l='MpServer', x=308.19, y=75.00, z=574.75], MoCEntityDuck['Duck'/82284, l='MpServer', x=272.88, y=56.00, z=528.91], MoCEntityOgre['Ogre'/82287, l='MpServer', x=304.50, y=75.00, z=575.50], EntityItem['item.item.feather'/82286, l='MpServer', x=308.84, y=74.13, z=560.91]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2444)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:919)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_45, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1347735832 bytes (1285 MB) / 2353004544 bytes (2244 MB) up to 5726797824 bytes (5461 MB)
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx6144m -XX:MaxPermSize=256m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.141.1403 Minecraft Forge 10.13.3.1403 Optifine OptiFine_1.7.10_HD_B7 56 mods loaded, 56 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	FML{7.10.141.1403} [Forge Mod Loader] (modpack.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Forge{10.13.3.1403} [Minecraft Forge] (modpack.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	appliedenergistics2-core{rv1-stable-1} [AppliedEnergistics2 Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	CodeChickenCore{1.0.4.29} [CodeChicken Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	NotEnoughItems{1.0.3.74} [Not Enough Items] (Not-Enough-Items-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	OpenModsCore{0.6} [OpenModsCore] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	<CoFH ASM>{000} [CoFH ASM Data Initialization] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	bspkrsCore{6.16} [bspkrsCore] ([1.7.10]bspkrsCore-universal-6.16.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Treecapitator{1.7.10} [Treecapitator] ([1.7.10]Treecapitator-universal-2.0.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	appliedenergistics2{rv1-stable-1} [Applied Energistics 2] (appliedenergistics2-rv1-stable-1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Backpack{2.0.1} [Backpack] (Backpacks-Mod.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BiblioCraft{1.9.2} [BiblioCraft] (BiblioCraft[v1.9.2][MC1.7.10].jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	CoFHCore{1.7.10R3.0.0RC7} [CoFH Core] (CoFHCore-[1.7.10]3.0.0RC7-211.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	ThermalFoundation{1.7.10R1.0.0RC7} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.0.0RC7-62.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	ThermalExpansion{1.7.10R4.0.0RC7} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.0.0RC7-141.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BigReactors{0.4.2A2} [Big Reactors] (BigReactors-0.4.2A2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Core{6.3.1} [BuildCraft] (buildcraft-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Transport{6.3.1} [BC Transport] (buildcraft-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Silicon{6.3.1} [BC Silicon] (buildcraft-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Builders{6.3.1} [BC Builders] (buildcraft-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Energy{6.3.1} [BC Energy] (buildcraft-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Factory{6.3.1} [BC Factory] (buildcraft-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	BuildCraft|Compat{6.3.0} [BuildCraft Compat] (buildcraft-compat-6.3.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	CarpentersBlocks{3.3.1} [Carpenter's Blocks] (Carpenter's Blocks v3.3.1 - MC 1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	chisel{2.2.1} [Chisel] (Chisel 2-2.2.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	CustomSpawner{3.3.0} [DrZhark's CustomSpawner] (CustomMobSpawner 3.3.0.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	customnpcs{1.7.10d} [CustomNpcs] (CustomNPCs_1.7.10d.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	CustomOreGen{1.2.17} [Custom Ore Generation] (CustomOreGen-1.7.10-1.2.17.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	props{2.0.2} [Decocraft] (Decocraft-2.0.2_1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	MoCreatures{6.3.1} [DrZhark's Mo'Creatures Mod] (DrZharks MoCreatures Mod v6.3.1.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	eiramoticons{1.0.61} [EiraMoticons] (eiramoticons-mc1.7.10-1.0.61.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	eplus{1.7.10-3.0.1} [Enchanting Plus] (EnchantingPlus-1.7.10-3.0.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Enchiridion{1.1} [Enchiridion] (Enchiridion-1.7.X-1.2b.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	EE3{0.3.505} [Equivalent Exchange 3] (EquivalentExchange3-1.7.10-0.3.505.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	ExtraUtilities{1.2.0} [Extra Utilities] (extrautilities-1.2.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	iChunUtil{4.1.3} [iChunUtil] (iChun-Util-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	inventorytweaks{1.58-147-645ca10} [Inventory Tweaks] (InventoryTweaks-1.58-147.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Waila{1.5.3} [Waila] (Waila-1.5.3_1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	JABBA{1.1.4} [JABBA] (Jabba-1.1.4_1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	lucky{5.1.0} [Lucky Block] (Lucky-Block-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Mantle{1.7.10-0.3.2.jenkins184} [Mantle] (Mantle-1.7.10-0.3.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	MapWriter{2.1.2} [MapWriter] (MapWriter-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	mfm{v2.1.0} [Mo' Furnaces Mod] (mfm-1.7.10-2.1.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	Morph{0.9.1} [Morph] (Morphing-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	cfm{3.4.7} [§9MrCrayfish's Furniture Mod] (MrCrayfishFurnitureModv3.4.7(1.7.10).jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	NetherOres{1.7.10R2.3.0RC3} [Nether Ores] (NetherOres-[1.7.10]2.3.0RC3-84.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	OpenMods{0.6} [OpenMods] (OpenModsLib-1.7.10-0.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	OpenBlocks{1.3} [OpenBlocks] (OpenBlocks-1.7.10-1.3.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	RandomThings{2.2.4} [Random Things] (RandomThings-2.2.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	RedstoneArsenal{1.7.10R1.1.0B4} [Redstone Arsenal] (RedstoneArsenal-[1.7.10]1.1.0B4-10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	simply_sit{1.7.10-1.1.0} [Simply Sit] (Simply-Sit-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	SSR{Alpha 0.9a} [Soul Shards: Reborn] (Soul-Shards-Reborn-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	TConstruct{1.7.10-1.8.5.build957} [Tinkers' Construct] (TConstruct-1.7.10-1.8.5.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	warpbook{2.0.null} [Warp Book] (warpbook-1.7.10_2.0.36.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available
+	OpenModsLib crash transformers: [stencil_patches:FINISHED],[movement_callback:FINISHED],[map_gen_fix:FINISHED],[gl_capabilities_hook:FINISHED],[player_render_hook:FINISHED]
+	AE2 Version: stable rv1-stable-1 for Forge 10.13.0.1187
+	CoFHCore: -[1.7.10]3.0.0RC7-211
+	ThermalFoundation: -[1.7.10]1.0.0RC7-62
+	ThermalExpansion: -[1.7.10]4.0.0RC7-141
+	Mantle Environment: DO NOT REPORT THIS CRASH! Unsupported mods in environment: optifine
+	NetherOres: Lacking version information.
+	RedstoneArsenal: Lacking version information.
+	TConstruct Environment: Environment healthy.
+	Stencil buffer state: Function set: GL30, pool: forge, bits: 8
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BC:ON, MJ6:OFF, MJ5:OFF, RF:ON, RFItem:ON, MFR:OFF, DSU:ON, FZ:OFF, FMP:OFF, RB:OFF, CLApi:OFF, Waila:ON, InvTweaks:ON, NEI:ON, CraftGuide:OFF, Mekanism:OFF, ImmibisMicroblocks:OFF, BetterStorage:OFF
+	Launched Version: 1.7.10-Forge10.13.3.1403-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 4600 GL version 4.3.0 - Build 10.18.14.4156, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: [BDcraft Musics Pack.zip, [1.8.3]_R3D.CRAFT_SR-64x_v0.2.2.zip]
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
